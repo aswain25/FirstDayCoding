@@ -14,8 +14,11 @@ public class Coding {
     public static void main(String[] args)
     {
         List<String> strings = Arrays.asList("a", "f", "b", "c", "a", "f");
+
+        System.out.println("findDuplicates Strings: ");
         findDuplicates(strings);
 
+        System.out.println("findDuplicates chars: ");
         findDuplicatesChars("happybirthday");
 
         printFizzBuzz();
@@ -47,14 +50,15 @@ public class Coding {
     {
         for (int i = 0; i < 20; i++)
         {
-            if (i % 3 == 0)
+            if (i % 3 == 0 && i % 5 == 0)
+                System.out.println(i + ": Fuzz Buzz");
+            else if (i % 3 == 0)
                 System.out.println(i + ": Fuzz");
             else if (i % 5 == 0)
                 System.out.println(i + ": Buzz");
-            else if (i % 3 == 0 && i % 5 == 0)
-                System.out.println(i + ": Fuzz Buzz");
+
             else
-                System.out.println(i + ": Fuzz Buzz");
+                System.out.println(i + ": ");
         }
     }
 }
